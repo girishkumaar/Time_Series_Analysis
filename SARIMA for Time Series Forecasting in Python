@@ -1,0 +1,29 @@
+
+# specify training data
+data = ...
+# define model
+model = SARIMAX(data, ...)
+
+# specify training data
+data = ...
+# define model configuration
+my_order = (1, 1, 1)
+my_seasonal_order = (1, 1, 1, 12)
+# define model
+model = SARIMAX(data, order=my_order, seasonal_order=my_seasonal_order, ...)
+
+# specify training data
+data = ...
+# define model
+model = SARIMAX(data, order=..., seasonal_order=...)
+# fit model
+model_fit = model.fit()
+
+# specify training data
+data = ...
+# define model
+model = SARIMAX(data, order=..., seasonal_order=...)
+# fit model
+model_fit = model.fit()
+# one step forecast
+yhat = model_fit.forecast()
